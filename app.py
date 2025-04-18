@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load your verses once
 verses = []
-with open("quran-simple.txt", "r", encoding="utf-8") as file:
+with open("quran-simple-clean.txt", "r", encoding="utf-8") as file:
     for line in file:
         parts = line.strip().split("|")
         if len(parts) == 3:
