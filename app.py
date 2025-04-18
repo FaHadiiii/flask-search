@@ -45,7 +45,6 @@ def search_verse():
                 "text": verse["text"]
             })
 
-    # Sort by score descending
     results.sort(key=lambda x: x["score"], reverse=True)
 
     if not results:
@@ -54,4 +53,4 @@ def search_verse():
     return jsonify(results)
 
 if __name__ == "__main__":
-    app.run() 
+    app.run(host='0.0.0.0', port=10000)
